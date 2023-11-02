@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <style>
+        #padma1 {
+            text-align: center;
+            height: 170px;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        #output {
+            font-size: xx-large;
+        }
+
+        section {
+            background-color: whitesmoke;
+            margin: 10% 20% 30% 33%;
+            height: 180px;
+            text-align: center;
+            box-shadow: 2px 3px 4px;
+            margin-bottom: 80px;
+
+        }
+
+        #sub {
+            background-color: red;
+            width: 25px;
+            color: white;
+        }
+
+        #reset {
+            background-color: gray;
+        }
+
+        #add {
+            background-color: green;
+            width: 25px;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+ <section>
+        <div id="padma1">
+            <h1>Counter</h1>
+            <p id="output">0</p>
+            <div class="number1">
+                <button id="sub">-</button>
+                <button id="reset">Reset</button>
+                <button id="add">+</button>
+            </div>
+         </div>
+    </section>
+    <script>
+        
+        const sub=document.getElementById("sub");
+        const reset=document.getElementById("reset");
+        const add=document.getElementById("add");
+
+        add.addEventListener('click',()=>{
+            var count=document.getElementById("output");
+         count.innerHTML++;
+         if(count.innerHTML>0){
+          document.getElementById("output").style.color="green";
+            }
+           if(count.innerHTML==0) {
+                document.getElementById("output").style.color="black";
+            }
+        })
+
+        sub.addEventListener('click',()=>{
+          var count=document.getElementById("output");
+            count.innerHTML--;
+            if(count.innerHTML<0){
+                document.getElementById("output").style.color="red";
+            }
+            if(count.innerHTML==0) {
+                document.getElementById("output").style.color="black";
+            }
+           
+        })
+        reset.addEventListener('click',()=>{
+            var count=document.getElementById("output");
+            count.innerHTML=0;
+            if (count.innerHTML==0) {
+                document.getElementById("output").style.color="black";
+            }
+        });
+        
+
+    </script>
+</body>
+
+</html>
